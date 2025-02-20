@@ -1,5 +1,4 @@
-'use strict'
-
+"use strict";
 
 //lesson 1
 // variables- primitive types
@@ -225,9 +224,168 @@
 //   console.log("kenti");
 // }
 
+//loop
+let array = ["html", "css", "javascript", "bootstrap", "python"];
 
+for (let item = 0; item < array.length; item++) {
+  console.log(array[item]);
+}
 
+//h.w - 10
+let array8 = [
+  [2, -3, 5, 11],
+  [1, -35, -11],
+  [12, -36, -24],
+];
 
+for (let i = 0; i < array8.length; i++) {
+  const nestedArray = array8[i];
+  // console.log(nestedArray); // [2, -3, 5, 11] [1, -35, -11] [12, -36, -24]
+
+  for (let element = 0; element < nestedArray.length; element++) {
+    const savedElement = nestedArray[element];
+    // console.log(nestedArray[element]); //2 -3 5 11 1 ...
+    if (savedElement > 0) {
+      console.log(savedElement);
+    }
+  }
+}
+
+for (let element of array8) {
+  // console.log(element); // [] [] []
+  for (let item of element) {
+    // console.log(item);
+    if (item > 0) {
+      console.log(item);
+    }
+  }
+}
+
+// 1. for loop
 // 2. while loop
-// 3. for of
-// 4. for in
+let newlangauges = ["html", "php", "nodeJS"];
+
+let newELement = 0;
+while (newELement < newlangauges.length) {
+  console.log(newlangauges[newELement]);
+  newELement++;
+}
+
+//
+let i = 1;
+
+while (i < 10) {
+  console.log(i);
+  i++;
+  if (i === 8) {
+    break;
+  }
+}
+
+// 3. for of ->  values
+let langauges = ["html", "php", "nodeJS"];
+
+for (let item of langauges) {
+  // console.log(item);
+  if (item.length > 4) {
+    console.log(item);
+  }
+}
+
+// 4. for in -> key
+let langauges2 = ["html", "php", "nodeJS"];
+
+for (let key in langauges2) {
+  console.log(key);
+}
+
+//
+let numbersArray = [25, 35, 16, 100, 12];
+
+for (let item of numbersArray) {
+  if (item === 100) {
+    continue;
+  }
+  console.log(item);
+}
+
+//
+for (let i = 0; i <= 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i); //0 1 2 4 5
+}
+
+//
+let arraynew = ["apple", "mango", 10, 25, "banana"];
+
+for (let i = 0; i < arraynew.length; i++) {
+  // console.log(arraynew[i]);
+  if (typeof arraynew[i] === "string") {
+    console.log(arraynew[i]);
+  }
+}
+
+for (let item of arraynew) {
+  if (typeof item === "string") {
+    console.log(item);
+  }
+}
+
+//h.w. - 9
+let array7 = [32, 14, null, "40", 50];
+
+for (let el of array7) {
+  // console.log(el);
+  if (typeof el === "number" && el % 5 === 0) {
+    console.log(el);
+  }
+}
+
+//3 & 4
+let array2 = [1, 2, 3, 4, 5];
+
+let sum = 0;
+for (let item of array2) {
+  // sum = sum + item;
+  sum += item;
+}
+
+let resultNew = sum / array2.length;
+
+console.log(sum);
+console.log(resultNew);
+
+// 7
+let array6 = [2, 3, 5, 10, 25, 24, 11, 100, 6, 7, 10];
+
+for (let item of array6) {
+  if (item % 2 == 1) {
+    console.log(item);
+  }
+}
+
+//
+let userInfo = {
+  fname: "anna",
+  age: 18,
+};
+
+let info = userInfo.fname + " " + "არის" + " " + userInfo.age + " " + "წლის";
+let info2 = `${userInfo.fname} არის ${userInfo.age} წლის `;
+console.log(info);
+console.log(info2);
+
+// loop object
+
+let userInfo2 = {
+  fname: "anna",
+  age: 18,
+};
+
+for (let key in userInfo2) {
+  // console.log(key); // fname age
+  console.log(userInfo2[key]); // anna 18
+  
+}
