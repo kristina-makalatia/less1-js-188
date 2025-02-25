@@ -225,167 +225,354 @@
 // }
 
 //loop
-let array = ["html", "css", "javascript", "bootstrap", "python"];
+// let array = ["html", "css", "javascript", "bootstrap", "python"];
 
-for (let item = 0; item < array.length; item++) {
-  console.log(array[item]);
-}
+// for (let item = 0; item < array.length; item++) {
+//   console.log(array[item]);
+// }
 
-//h.w - 10
-let array8 = [
-  [2, -3, 5, 11],
-  [1, -35, -11],
-  [12, -36, -24],
-];
+// //h.w - 10
+// let array8 = [
+//   [2, -3, 5, 11],
+//   [1, -35, -11],
+//   [12, -36, -24],
+// ];
 
-for (let i = 0; i < array8.length; i++) {
-  const nestedArray = array8[i];
-  // console.log(nestedArray); // [2, -3, 5, 11] [1, -35, -11] [12, -36, -24]
+// for (let i = 0; i < array8.length; i++) {
+//   const nestedArray = array8[i];
+//   // console.log(nestedArray); // [2, -3, 5, 11] [1, -35, -11] [12, -36, -24]
 
-  for (let element = 0; element < nestedArray.length; element++) {
-    const savedElement = nestedArray[element];
-    // console.log(nestedArray[element]); //2 -3 5 11 1 ...
-    if (savedElement > 0) {
-      console.log(savedElement);
-    }
-  }
-}
+//   for (let element = 0; element < nestedArray.length; element++) {
+//     const savedElement = nestedArray[element];
+//     // console.log(nestedArray[element]); //2 -3 5 11 1 ...
+//     if (savedElement > 0) {
+//       console.log(savedElement);
+//     }
+//   }
+// }
 
-for (let element of array8) {
-  // console.log(element); // [] [] []
-  for (let item of element) {
-    // console.log(item);
-    if (item > 0) {
-      console.log(item);
-    }
-  }
-}
+// for (let element of array8) {
+//   // console.log(element); // [] [] []
+//   for (let item of element) {
+//     // console.log(item);
+//     if (item > 0) {
+//       console.log(item);
+//     }
+//   }
+// }
 
 // 1. for loop
 // 2. while loop
-let newlangauges = ["html", "php", "nodeJS"];
+// let newlangauges = ["html", "php", "nodeJS"];
 
-let newELement = 0;
-while (newELement < newlangauges.length) {
-  console.log(newlangauges[newELement]);
-  newELement++;
+// let newELement = 0;
+// while (newELement < newlangauges.length) {
+//   console.log(newlangauges[newELement]);
+//   newELement++;
+// }
+
+// //
+// let i = 1;
+
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+//   if (i === 8) {
+//     break;
+//   }
+// }
+
+// // 3. for of ->  values
+// let langauges = ["html", "php", "nodeJS"];
+
+// for (let item of langauges) {
+//   // console.log(item);
+//   if (item.length > 4) {
+//     console.log(item);
+//   }
+// }
+
+// // 4. for in -> key
+// let langauges2 = ["html", "php", "nodeJS"];
+
+// for (let key in langauges2) {
+//   console.log(key);
+// }
+
+// //
+// let numbersArray = [25, 35, 16, 100, 12];
+
+// for (let item of numbersArray) {
+//   if (item === 100) {
+//     continue;
+//   }
+//   console.log(item);
+// }
+
+// //
+// for (let i = 0; i <= 5; i++) {
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log(i); //0 1 2 4 5
+// }
+
+// //
+// let arraynew = ["apple", "mango", 10, 25, "banana"];
+
+// for (let i = 0; i < arraynew.length; i++) {
+//   // console.log(arraynew[i]);
+//   if (typeof arraynew[i] === "string") {
+//     console.log(arraynew[i]);
+//   }
+// }
+
+// for (let item of arraynew) {
+//   if (typeof item === "string") {
+//     console.log(item);
+//   }
+// }
+
+// //h.w. - 9
+// let array7 = [32, 14, null, "40", 50];
+
+// for (let el of array7) {
+//   // console.log(el);
+//   if (typeof el === "number" && el % 5 === 0) {
+//     console.log(el);
+//   }
+// }
+
+// //3 & 4
+// let array2 = [1, 2, 3, 4, 5];
+
+// let sum = 0;
+// for (let item of array2) {
+//   // sum = sum + item;
+//   sum += item;
+// }
+
+// let resultNew = sum / array2.length;
+
+// console.log(sum);
+// console.log(resultNew);
+
+// // 7
+// let array6 = [2, 3, 5, 10, 25, 24, 11, 100, 6, 7, 10];
+
+// for (let item of array6) {
+//   if (item % 2 == 1) {
+//     console.log(item);
+//   }
+// }
+
+// //
+// let userInfo = {
+//   fname: "anna",
+//   age: 18,
+// };
+
+// let info = userInfo.fname + " " + "არის" + " " + userInfo.age + " " + "წლის";
+// let info2 = `${userInfo.fname} არის ${userInfo.age} წლის `;
+// console.log(info);
+// console.log(info2);
+
+// // loop object
+
+// let userInfo2 = {
+//   fname: "anna",
+//   age: 18,
+// };
+
+// for (let key in userInfo2) {
+//   // console.log(key); // fname age
+//   console.log(userInfo2[key]); // anna 18
+
+// }
+
+// lesson 4
+//object.keys()
+//object.values()
+//object.entries()
+
+let newUserInfo = {
+  fname: "anna",
+  age: 18,
+  userstatus: true,
+};
+
+for (let item in newUserInfo) {
+  console.log(newUserInfo[item]);
+}
+
+console.log(Object.keys(newUserInfo)); //['fname', 'age', 'userstatus']
+
+for (let item of Object.keys(newUserInfo)) {
+  console.log(item); // fname age userstatus
 }
 
 //
-let i = 1;
+console.log(Object.values(newUserInfo)); //  ['anna', 18, true]
 
-while (i < 10) {
-  console.log(i);
-  i++;
-  if (i === 8) {
-    break;
-  }
+for (let value of Object.values(newUserInfo)) {
+  console.log(value); //anna 18 true
 }
 
-// 3. for of ->  values
-let langauges = ["html", "php", "nodeJS"];
+//
+console.log(Object.entries(newUserInfo)); // [ ['fname', 'anna'], ['age', 18],['userstatus', true] ]
 
-for (let item of langauges) {
-  // console.log(item);
-  if (item.length > 4) {
-    console.log(item);
-  }
-}
-
-// 4. for in -> key
-let langauges2 = ["html", "php", "nodeJS"];
-
-for (let key in langauges2) {
+for (let [key, value] of Object.entries(newUserInfo)) {
   console.log(key);
+  console.log(value);
 }
 
-//
-let numbersArray = [25, 35, 16, 100, 12];
+//functions
+// 1. function declaration - hoisted
 
-for (let item of numbersArray) {
-  if (item === 100) {
-    continue;
-  }
-  console.log(item);
+function firstFnc(a, b) {
+  return a + b;
 }
 
-//
-for (let i = 0; i <= 5; i++) {
-  if (i === 3) {
-    continue;
-  }
-  console.log(i); //0 1 2 4 5
-}
+let result1 = firstFnc(10, 5);
+let resultNew = firstFnc(100, 10);
 
-//
-let arraynew = ["apple", "mango", 10, 25, "banana"];
-
-for (let i = 0; i < arraynew.length; i++) {
-  // console.log(arraynew[i]);
-  if (typeof arraynew[i] === "string") {
-    console.log(arraynew[i]);
-  }
-}
-
-for (let item of arraynew) {
-  if (typeof item === "string") {
-    console.log(item);
-  }
-}
-
-//h.w. - 9
-let array7 = [32, 14, null, "40", 50];
-
-for (let el of array7) {
-  // console.log(el);
-  if (typeof el === "number" && el % 5 === 0) {
-    console.log(el);
-  }
-}
-
-//3 & 4
-let array2 = [1, 2, 3, 4, 5];
-
-let sum = 0;
-for (let item of array2) {
-  // sum = sum + item;
-  sum += item;
-}
-
-let resultNew = sum / array2.length;
-
-console.log(sum);
+console.log(result1);
 console.log(resultNew);
 
-// 7
-let array6 = [2, 3, 5, 10, 25, 24, 11, 100, 6, 7, 10];
+//2. function expression - not hoisted
+let secondFnc = function (x) {
+  return x;
+};
 
-for (let item of array6) {
-  if (item % 2 == 1) {
-    console.log(item);
+let result2 = secondFnc("Hello 2");
+console.log(result2);
+
+// 3. arrow function - not hoisted
+let arrowFnc = (a) => {
+  return a;
+};
+
+let result3 = arrowFnc("Good Evening");
+console.log(result3);
+
+//var - hoisted
+//  let const - not hoisted
+
+///-----
+function checkNumberFnc(number) {
+  if (number === 2) {
+    return "გამოძახებს დროს გადაეცი 2";
+  } else if (number === 5) {
+    return "გამოძახებს დროს გადაეცი 5";
   }
+  return "error";
 }
+
+let resultNumber = checkNumberFnc(12);
+console.log(resultNumber);
 
 //
-let userInfo = {
-  fname: "anna",
-  age: 18,
-};
+function getAge1(birthYear, yearNow) {
+  let age = yearNow - birthYear;
+  return age;
 
-let info = userInfo.fname + " " + "არის" + " " + userInfo.age + " " + "წლის";
-let info2 = `${userInfo.fname} არის ${userInfo.age} წლის `;
-console.log(info);
-console.log(info2);
-
-// loop object
-
-let userInfo2 = {
-  fname: "anna",
-  age: 18,
-};
-
-for (let key in userInfo2) {
-  // console.log(key); // fname age
-  console.log(userInfo2[key]); // anna 18
-  
+  // return yearNow - birthYear;
 }
+
+let resultAge1 = getAge1(2000, 2025);
+console.log(resultAge1);
+
+//
+let getAge2 = function (birthYear, yearNow) {
+  return yearNow - birthYear;
+};
+
+let resultAge2 = getAge2(2002, 2025);
+console.log(resultAge2);
+
+//
+let getAge3 = (birthYear, yearNow) => {
+  let age = yearNow - birthYear;
+  // if (age < 18) {
+  //   return "არასრულწლოვანი";
+  // }
+  // return "სრულწლოვანი";
+  let ageNewResult = age < 18 ? "არასრულწლოვანი" : "სრულწლოვანი";
+  return ageNewResult;
+};
+
+let resultAge3 = getAge3(1999, 2025);
+let resultAge4 = getAge3(2020, 2025);
+
+console.log(resultAge3);
+console.log(resultAge4);
+
+//
+function sum(...numbers) {
+  let sum = 0;
+  for (let item of numbers) {
+    sum = sum + item;
+  }
+  return sum;
+}
+
+let sumResult = sum(10, 100, 14, 8, 7, 36, 23);
+let sumResult2 = sum(5, 10, 20);
+
+console.log(sumResult);
+console.log(sumResult2);
+
+// scope
+
+// 1. global scope
+let firstName = "nini";
+
+// 2. function scope = local scope
+function getAgeNew(birthYear) {
+  let yearNow = 2025;
+  let age = yearNow - birthYear;
+  console.log(age);
+
+  return age;
+}
+
+let newFncAgeResult = getAgeNew(2000);
+console.log(newFncAgeResult);
+// console.log(age); // error
+// console.log(yearNow); //error
+
+// 3. block scope
+
+let birthAge = 25;
+if (birthAge > 18) {
+  let isAdult = true;
+  console.log(isAdult); //true
+}
+// console.log(isAdult); //error
+
+//var - function scoped
+// let & const - block scoped & function scoped
+
+///
+function getAgeScope(birthYear) {
+  let age = 2025 - birthYear;
+
+  function printAge() {
+    let info = `You are ${age}, born in ${birthYear}`;
+    console.log(info); //1
+
+    if (age > 18) {
+      let adult = "is Adult";
+      console.log(adult); //2
+    }
+  }
+
+  printAge();
+  return age;
+}
+
+let resultNewFnc = getAgeScope(2002);
+console.log("dabrunebuli value =", resultNewFnc); //3
+
+// console.log(age); // error
+// console.log(info); //eror
