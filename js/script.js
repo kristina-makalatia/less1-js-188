@@ -395,184 +395,445 @@
 //object.values()
 //object.entries()
 
-let newUserInfo = {
-  fname: "anna",
-  age: 18,
-  userstatus: true,
+// let newUserInfo = {
+//   fname: "anna",
+//   age: 18,
+//   userstatus: true,
+// };
+
+// for (let item in newUserInfo) {
+//   console.log(newUserInfo[item]);
+// }
+
+// console.log(Object.keys(newUserInfo)); //['fname', 'age', 'userstatus']
+
+// for (let item of Object.keys(newUserInfo)) {
+//   console.log(item); // fname age userstatus
+// }
+
+// //
+// console.log(Object.values(newUserInfo)); //  ['anna', 18, true]
+
+// for (let value of Object.values(newUserInfo)) {
+//   console.log(value); //anna 18 true
+// }
+
+// //
+// console.log(Object.entries(newUserInfo)); // [ ['fname', 'anna'], ['age', 18],['userstatus', true] ]
+
+// for (let [key, value] of Object.entries(newUserInfo)) {
+//   console.log(key);
+//   console.log(value);
+// }
+
+// //functions
+// // 1. function declaration - hoisted
+
+// function firstFnc(a, b) {
+//   return a + b;
+// }
+
+// let result1 = firstFnc(10, 5);
+// let resultNew = firstFnc(100, 10);
+
+// console.log(result1);
+// console.log(resultNew);
+
+// //2. function expression - not hoisted
+// let secondFnc = function (x) {
+//   return x;
+// };
+
+// let result2 = secondFnc("Hello 2");
+// console.log(result2);
+
+// // 3. arrow function - not hoisted
+// let arrowFnc = (a) => {
+//   return a;
+// };
+
+// let result3 = arrowFnc("Good Evening");
+// console.log(result3);
+
+// //var - hoisted
+// //  let const - not hoisted
+
+// ///-----
+// function checkNumberFnc(number) {
+//   if (number === 2) {
+//     return "გამოძახებს დროს გადაეცი 2";
+//   } else if (number === 5) {
+//     return "გამოძახებს დროს გადაეცი 5";
+//   }
+//   return "error";
+// }
+
+// let resultNumber = checkNumberFnc(12);
+// console.log(resultNumber);
+
+// //
+// function getAge1(birthYear, yearNow) {
+//   let age = yearNow - birthYear;
+//   return age;
+
+//   // return yearNow - birthYear;
+// }
+
+// let resultAge1 = getAge1(2000, 2025);
+// console.log(resultAge1);
+
+// //
+// let getAge2 = function (birthYear, yearNow) {
+//   return yearNow - birthYear;
+// };
+
+// let resultAge2 = getAge2(2002, 2025);
+// console.log(resultAge2);
+
+// //
+// let getAge3 = (birthYear, yearNow) => {
+//   let age = yearNow - birthYear;
+//   // if (age < 18) {
+//   //   return "არასრულწლოვანი";
+//   // }
+//   // return "სრულწლოვანი";
+//   let ageNewResult = age < 18 ? "არასრულწლოვანი" : "სრულწლოვანი";
+//   return ageNewResult;
+// };
+
+// let resultAge3 = getAge3(1999, 2025);
+// let resultAge4 = getAge3(2020, 2025);
+
+// console.log(resultAge3);
+// console.log(resultAge4);
+
+// //
+// function sum(...numbers) {
+//   let sum = 0;
+//   for (let item of numbers) {
+//     sum = sum + item;
+//   }
+//   return sum;
+// }
+
+// let sumResult = sum(10, 100, 14, 8, 7, 36, 23);
+// let sumResult2 = sum(5, 10, 20);
+
+// console.log(sumResult);
+// console.log(sumResult2);
+
+// // scope
+
+// // 1. global scope
+// let firstName = "nini";
+
+// // 2. function scope = local scope
+// function getAgeNew(birthYear) {
+//   let yearNow = 2025;
+//   let age = yearNow - birthYear;
+//   console.log(age);
+
+//   return age;
+// }
+
+// let newFncAgeResult = getAgeNew(2000);
+// console.log(newFncAgeResult);
+// // console.log(age); // error
+// // console.log(yearNow); //error
+
+// // 3. block scope
+
+// let birthAge = 25;
+// if (birthAge > 18) {
+//   let isAdult = true;
+//   console.log(isAdult); //true
+// }
+// // console.log(isAdult); //error
+
+// //var - function scoped
+// // let & const - block scoped & function scoped
+
+// ///
+// function getAgeScope(birthYear) {
+//   let age = 2025 - birthYear;
+
+//   function printAge() {
+//     let info = `You are ${age}, born in ${birthYear}`;
+//     console.log(info); //1
+
+//     if (age > 18) {
+//       var adult = "is Adult";
+//       console.log(adult); //2
+//     }
+// console.log(adult);
+//   }
+// console.log(adult);
+
+//   printAge();
+//   return age;
+// }
+
+// let resultNewFnc = getAgeScope(2002);
+// console.log("dabrunebuli value =", resultNewFnc); //3
+
+// // console.log(age); // error
+// // console.log(info); //eror
+
+//lesson 5
+// h.w
+// 2.
+let user = {
+  firstname: "giorgi",
+  lastname: "saakadze",
+  age: 32,
+  isloggedin: true,
 };
 
-for (let item in newUserInfo) {
-  console.log(newUserInfo[item]);
-}
-
-console.log(Object.keys(newUserInfo)); //['fname', 'age', 'userstatus']
-
-for (let item of Object.keys(newUserInfo)) {
-  console.log(item); // fname age userstatus
-}
-
-//
-console.log(Object.values(newUserInfo)); //  ['anna', 18, true]
-
-for (let value of Object.values(newUserInfo)) {
-  console.log(value); //anna 18 true
-}
-
-//
-console.log(Object.entries(newUserInfo)); // [ ['fname', 'anna'], ['age', 18],['userstatus', true] ]
-
-for (let [key, value] of Object.entries(newUserInfo)) {
-  console.log(key);
-  console.log(value);
-}
-
-//functions
-// 1. function declaration - hoisted
-
-function firstFnc(a, b) {
-  return a + b;
-}
-
-let result1 = firstFnc(10, 5);
-let resultNew = firstFnc(100, 10);
-
-console.log(result1);
-console.log(resultNew);
-
-//2. function expression - not hoisted
-let secondFnc = function (x) {
-  return x;
+let user2 = {
+  firstname: "anna",
+  lastname: "ragaca",
+  age: 12,
+  isloggedin: false,
 };
 
-let result2 = secondFnc("Hello 2");
-console.log(result2);
-
-// 3. arrow function - not hoisted
-let arrowFnc = (a) => {
-  return a;
-};
-
-let result3 = arrowFnc("Good Evening");
-console.log(result3);
-
-//var - hoisted
-//  let const - not hoisted
-
-///-----
-function checkNumberFnc(number) {
-  if (number === 2) {
-    return "გამოძახებს დროს გადაეცი 2";
-  } else if (number === 5) {
-    return "გამოძახებს დროს გადაეცი 5";
+function printName(obj) {
+  if (obj.isloggedin) {
+    // return obj.firstname + " " + obj.lastname;
+    return `${obj.firstname} ${obj.lastname}`;
   }
-  return "error";
+  return false;
 }
 
-let resultNumber = checkNumberFnc(12);
-console.log(resultNumber);
+let resultObj = printName(user);
+let resultObj2 = printName(user2);
 
-//
-function getAge1(birthYear, yearNow) {
-  let age = yearNow - birthYear;
-  return age;
+console.log(resultObj);
+console.log(resultObj2);
 
-  // return yearNow - birthYear;
+// 3.
+function maxValue(...numbers) {
+  console.log(Math.max(...numbers));
 }
 
-let resultAge1 = getAge1(2000, 2025);
-console.log(resultAge1);
-
-//
-let getAge2 = function (birthYear, yearNow) {
-  return yearNow - birthYear;
-};
-
-let resultAge2 = getAge2(2002, 2025);
-console.log(resultAge2);
-
-//
-let getAge3 = (birthYear, yearNow) => {
-  let age = yearNow - birthYear;
-  // if (age < 18) {
-  //   return "არასრულწლოვანი";
-  // }
-  // return "სრულწლოვანი";
-  let ageNewResult = age < 18 ? "არასრულწლოვანი" : "სრულწლოვანი";
-  return ageNewResult;
-};
-
-let resultAge3 = getAge3(1999, 2025);
-let resultAge4 = getAge3(2020, 2025);
-
-console.log(resultAge3);
-console.log(resultAge4);
-
-//
-function sum(...numbers) {
-  let sum = 0;
-  for (let item of numbers) {
-    sum = sum + item;
-  }
-  return sum;
-}
-
-let sumResult = sum(10, 100, 14, 8, 7, 36, 23);
-let sumResult2 = sum(5, 10, 20);
-
-console.log(sumResult);
-console.log(sumResult2);
-
-// scope
-
-// 1. global scope
-let firstName = "nini";
-
-// 2. function scope = local scope
-function getAgeNew(birthYear) {
-  let yearNow = 2025;
-  let age = yearNow - birthYear;
-  console.log(age);
-
-  return age;
-}
-
-let newFncAgeResult = getAgeNew(2000);
-console.log(newFncAgeResult);
-// console.log(age); // error
-// console.log(yearNow); //error
-
-// 3. block scope
-
-let birthAge = 25;
-if (birthAge > 18) {
-  let isAdult = true;
-  console.log(isAdult); //true
-}
-// console.log(isAdult); //error
-
-//var - function scoped
-// let & const - block scoped & function scoped
+maxValue(8, 120, 36, 25, 19, 26);
 
 ///
-function getAgeScope(birthYear) {
-  let age = 2025 - birthYear;
-
-  function printAge() {
-    let info = `You are ${age}, born in ${birthYear}`;
-    console.log(info); //1
-
-    if (age > 18) {
-      let adult = "is Adult";
-      console.log(adult); //2
+function getMaxValue(...numbersArray) {
+  let maxValue = 0;
+  for (let item of numbersArray) {
+    if (item > maxValue) {
+      maxValue = item;
     }
   }
 
-  printAge();
-  return age;
+  return maxValue;
 }
 
-let resultNewFnc = getAgeScope(2002);
-console.log("dabrunebuli value =", resultNewFnc); //3
+let maxValueResult = getMaxValue(8, 120, 36, 25, 19, 26);
+console.log(maxValueResult);
 
-// console.log(age); // error
-// console.log(info); //eror
+//closure
+
+let y = 100;
+
+function outside(x) {
+  let y = 200;
+  function inside() {
+    let y = 300; //+
+    return x + x + y;
+  }
+
+  return inside;
+}
+
+let resultNew = outside(10);
+let resultNew2 = outside(20);
+console.log(resultNew); //insdie function
+
+let insideResult = resultNew();
+console.log(insideResult); //10 + 10 = 20
+
+let insideResult2 = resultNew2();
+console.log(insideResult2); // 20 + 20 = 40
+
+// if (true) {
+//   const a = 150;
+// }
+
+// console.log(a); // error
+
+//array methods
+// foreach
+let array = ["html", "css", "js", "python"];
+
+for (let item of array) {
+  if (item.length > 4) {
+    console.log(item);
+  }
+}
+
+array.forEach((x) => {
+  if (x.length > 4) {
+    console.log(x);
+  }
+});
+
+//
+// let fruits = ["banana", "apple", "mango"];
+
+// fruits.unshift("orange");
+// console.log(fruits); //vamatebt privel adgilas
+
+// fruits.push("strawberry");
+// console.log(fruits);
+
+//fruits.shift();
+// console.log(fruits); //washlis pirvel elements
+
+// fruits.pop();
+// console.log(fruits); //washlis bolo elements
+
+//splice
+let fruitsNewArray = ["banana", "apple", "mango", "kiwi"];
+
+// fruitsNewArray.splice(1, 2);
+// console.log(fruitsNewArray); //[banana, kiwi]
+
+// let deletedValues = fruitsNewArray.splice(1, 2);
+// console.log(deletedValues);
+
+// fruitsNewArray.splice(2, 1, 'strawberry');
+// console.log(fruitsNewArray);
+
+// fruitsNewArray.splice(2, 0, "bootstrap");
+// console.log(fruitsNewArray);
+
+fruitsNewArray.splice(-2, 1, "orange");
+console.log(fruitsNewArray);
+
+//slice
+let fruits2 = ["orange", "kiwi", "mango", "lemon"];
+
+let fruitsNewArraySlice = fruits2.slice(1, 3);
+console.log(fruitsNewArraySlice);
+
+//map
+let numbers = [10, 25, 36, 14, 20];
+
+let newNumbersMap = numbers.map(function (item) {
+  return item * 3;
+});
+
+let newNumbersMap2 = numbers.map((y) => y * 3);
+
+console.log(newNumbersMap);
+console.log(newNumbersMap2);
+
+let fruitsMapArray = ["apple", "banana", "kiwi"];
+let fruitsMapArrayNew2 = fruitsMapArray.map((item) => item.toUpperCase());
+
+console.log(fruitsMapArrayNew2);
+
+let numberArray = [1, 2, 3];
+let newnumberArrayMap = numberArray.map((item) => Math.pow(item, 2));
+console.log(newnumberArrayMap);
+
+let numberArray2 = [16, 121, 100];
+let newnumberArray2 = numberArray2.map((item) => Math.sqrt(item));
+console.log(newnumberArray2);
+
+//filter
+let numbersFilter = [13, 25, 8, 3, 7];
+
+let numbersFilterArrayNew = numbersFilter.filter(function (number) {
+  return number > 10;
+});
+
+let numbersFilterArrayNew2 = numbersFilter.filter((number) => number > 10);
+
+console.log(numbersFilterArrayNew);
+console.log(numbersFilterArrayNew2);
+
+//reverse
+let languages = ["JavaScript", "Python", "C++", "Java", "Lua"];
+languages.reverse();
+
+console.log(languages);
+
+// indexOf
+let languages2 = ["JavaScript", "Python", "C++", "Java", "Lua"];
+let IndexValue = languages2.indexOf("Python");
+console.log(IndexValue);
+
+//concat
+let names1 = ["anna", "nini", "lasha"];
+let names2 = ["levani", "beka"];
+
+let concatArray = names1.concat(names2);
+console.log(concatArray);
+
+// reduce
+// let nestedArray = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ].reduce(function (accumulator, currentValue) {
+//   return accumulator.concat(currentValue);
+//   //  [].concat([1, 2],) -> [1,2]
+//   // [1,2].concat([3, 4]) -> [1,2,3,4]
+//   // [1,2,3,4].concat( [5, 6]) ->[1, 2 , 3 , 4, 5 ,6]
+// },[]);
+
+// console.log(nestedArray);//[ 1,2,3,4,5,6]
+
+//
+let arrayNestedNew = [
+  [12, -3, 4],
+  [15, -10],
+  [100, -6],
+].reduce(function (accumulator, currentValue) {
+  return accumulator.concat(currentValue);
+}, []);
+
+console.log(arrayNestedNew); //[12, -3, 4, 15, 10...]
+
+let filteredArray = arrayNestedNew.filter((item) => item > 0);
+console.log(filteredArray);
+
+// string methods
+let string = "    Hello     ";
+
+console.log(string.length); //5
+console.log(string.startsWith("h")); //false
+console.log(string.startsWith("H")); //true
+console.log(string.endsWith("a")); //false
+console.log(string.toUpperCase()); //HELLO
+console.log(string.toLowerCase()); //hello
+
+console.log(string.trim());
+
+//
+let fname = "anna";
+let lname = "ragaca";
+let resultConcat = fname.concat(" ", lname);
+console.log(resultConcat);
+
+//
+let stringNew = "Hello";
+console.log(stringNew.indexOf("e")); //1
+console.log(stringNew.indexOf("a")); // -1
+
+console.log(stringNew.charAt(2)); //l
+console.log(stringNew.charAt(stringNew.length - 1)); //o
+
+//
+let str = "hello";
+
+let result1 = str.split(""); //["h", "e", "l", "l", "o"];
+let result2 = result1.reverse();
+let result3 = result2.join("");
+
+//
+let result = str.split("").reverse().join("");
+
+console.log(result); //
